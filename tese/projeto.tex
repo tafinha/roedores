@@ -1,0 +1,206 @@
+\documentclass[11pt,titlepage]{article}
+
+%--- USEPACKAGES ---
+\usepackage[portuges]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{subfigure, epsfig}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx,wrapfig} % para incluir figuras
+\usepackage[all]{xy} % para incluir diagramas
+\usepackage{amsfonts, amssymb,amsthm, amsmath, amscd} % pacote AMS
+\usepackage{color, float, bbm, multicol}
+\usepackage{verbatim, listings, booktabs}
+\usepackage{fancyhdr} % FANCYHEADER
+\usepackage{setspace}
+\usepackage{lastpage} % Conta o número de páginas
+\usepackage{mathpazo} % fonte palatino
+\usepackage{hyperref}
+\def\figureautorefname{Figura} %Figura e não Figure!
+\hypersetup{colorlinks,citecolor=black, linkcolor=black}
+\usepackage{wasysym}
+
+\usepackage{palatino} % bookman,palatino,courier,times FONTES
+\usepackage[outercaption]{sidecap} % Customizar as legendas de figuras e tabelas
+\usepackage{array} % Elementos extras para formatação de tabelas
+\usepackage{icomma} % Posicionar inteligentemente a vírgula como separador decimal
+\usepackage[tight]{units} % Formatar as unidades com as distâncias corretas
+\usepackage{tabularx}
+\usepackage[round,authoryear,sort]{natbib} %parenteses e nome e data do autor ao 
+%\usepackage[square, numbers, sort]{natbib} % colchetes e numeros
+% Adicionar bibliografia, índice e conteúdo na Tabela de conteúdo
+% Não inclui lista de tabelas e figuras no índice
+\usepackage[nottoc,notlof,notlot, notindex]{tocbibind}
+%\usepackage{portuges}
+%--- PAGE LAYOUT >> PARA a4 COM ONESIDE ---
+\hoffset = 0pt % 1inch + hoffset (margem vertical esquerda)
+\voffset = 0pt % 1inch + voffset (margem horizontal superior)
+\oddsidemargin = 0pt % complemento da margem vertical esquerda
+\topmargin = 2pt % complemento da margem horizontal superior
+\headheight = 13pt % altura do header
+\headsep = 13pt % distancia do header ate o texto
+\textheight = 650pt % altura do texto
+\textwidth = 451pt % largura do texto
+\marginparsep = 0pt % distancia do texto ate a
+%margin notes (11pt)
+\marginparwidth = 0pt % largura da margin notes (54pt)
+\paperheight = 297mm % a4
+\paperwidth = 210mm % a4
+
+\usepackage{wallpaper}
+
+
+%---CAPA---
+
+%\ThisCenterWallPaper{1}{Eulemurflavifrons.jpg}
+\title{
+\large{\Large Hell-atório} \\
+\vspace{5 cm}
+\Huge{Seu título vai aqui}}
+\singlespacing
+\vspace{8 cm}
+\author{{\Large {\bf Tafinha}} \\
+\footnotesize{seu e-mail, sei lá} \\\\
+\footnotesize{Orientador \bf Gabriel Marroig} \\
+\footnotesize{Laboratório de Evolução de Mamíferos} \\
+\footnotesize{Departamento de Genética e Biologia Evolutiva} \\
+\footnotesize{Instituto de Biociências}}
+
+%--- DEFINICOES ---
+\newcommand{\barra}{\backslash}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\norma}[1]{\left\Vert#1\right\Vert}
+\newcommand{\hr}{\par\noindent\hrulefill\par}
+
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+%--- O DOCUMENTO EM SI ---
+%nessa parte vc vai começar a escrever o seu lindo Relatório!
+
+\begin{document}
+
+%--- ESTILO DA PAGINA ---
+\pagestyle{fancy} % fancy,plain,empty,headings, são os estilos das páginas
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagenumbering{Roman}
+\maketitle
+%\thispagestyle{plain} % sem barras no cabeçalho na capa (PAGINA 1)
+%\hrule % linha estetica
+%\hrule % nova linha estetica
+%\newpage
+
+%>>>>>>>>>>>>>>>>>> INICIO DO TEXTO <<<<<<<<<<<<<<<<<<<
+\pagenumbering{arabic}
+
+\begin{abstract}
+\singlespacing
+Isso é um resumo bem resumido! Tentei colocar algumas dicas e anotações de coisas que tive dúvidas enquanto tava escrevendo... Tou usando o TeXStudio, é um programinha bem bala, recomendo! A maioria das dicas tao na internet, tem alguns sites legais que vc consegue achar tutoriais ou instruções sobre funções.
+
+\url{http://texstudio.sourceforge.net/}
+
+\textbf{Palavras-chave}: TexStudio, Tafinha, Manda bala, Hell-atório.
+\vspace{1 cm} 
+\tableofcontents %comando que gera o sumário com as sections e subsections...
+\thispagestyle{empty} %pra nao ter numero na página nem cabeçalho
+\end{abstract}
+\newpage %comando de nome auto-explicativo: amo!!!
+
+\section{Primeiro passo}
+%\onehalfspacing %para espaçmento simples
+\doublespacing %para espaçamendo duplo
+A primeira parte deste processo é vc baixar o TeXStudio e abrir nele o arquivo .tex que te mandei, onde vc vai poder ver os comandos que usei pra construir o texto e gerar esse doc vc mesma!
+
+\section{Segundo passo}
+A segunda parte é vc mandar bala escrevendo e ficando craque logo de cara! 
+
+Então vamos ãs coisas bem básicas antes:
+
+Duas barras assim \\ quebram a linha, fazendo um parágrafo.
+
+Ou se vc deixar uma linha de espaço entre um parágrafo e o seguinte (o que fica até mais fácil de ler enquanto vc escreve/edita).
+
+\textit{itálico}
+
+\textbf{negrito}
+
+{\LARGE grande}
+
+{\tiny pequenino}
+
+Se você tiver usando  TeXStudio fica ainda mais fácil de ressaltar o texto.
+
+\subsection{Objetivos}
+Pra vc ficar craque, neste material didático fabuloso, vamos aprender a:
+ \begin{description} %fazendo itens
+ 
+     \item[\textbf{1)}] Fazer itens! plin... ja aprendeu!
+     
+     \item[\textbf{2)}] Inserir figuras!
+     
+     \item[\textbf{3)}] Inserir e montar tabelas rapidamente!
+     
+     \item[\textbf{4)}] Super rápido, amigaaaa!!!!
+      
+ \end{description}
+ \subsubsection{Figuras}
+
+Aqui vc vai inserir uma figura. Atenção que vc tem que indicar a localização dela, ou só salvar a figura na mesma pasta onde está o seu arquivo .tex, por isso que te mandei esse arquivo em uma pasta, assim você pode gerar esse documento sozinha e ainda ganha este lindo macaco revoltado no metrô!
+
+
+\subsubsection{Tabelas}
+\begin{table}[H] %dentro dos colchetes vc coloca a posição em que vc quer que a tabela, figura ou qqr coisa grafica fique...  Nao sei por que, mas pra tabela só funciona o [H]... vc pode por [t] pra top, [b] pra botton, e assim vai
+\begin{center} %centralizar
+\hr %comando para fazer a linha
+\caption[idem figura nas chaves vc coloca a legenda que vai aparecer no documento]{Pra construir tabelas vc pode fazer elas na mão mesmo, separando as colunas com e separando as linhas com duas barras Ou então, se vc tiver uma tabela no excel, por exemplo e quiser passar pro tex vc usa o R e usa o xtable, que é a coisa mais linda!}
+\end{center}
+\label{tabela}
+\begin{tabularx}{\textwidth}{lcr} %dentro do segundo par de chaves vc coloca como quer a orientaçao do texto em cada coluna left right center...
+    \hline %outra linha
+    coluna 1 & coluna 2  \\  
+    1 & 2 \\
+    bla & Blé \\
+    \hline
+\end{tabularx}
+\end{table}
+
+\paragraph{Destaque} esse comando é legal se vc quer destacar uma seção sem fazer ela aparecer no sumário.
+
+Olha a equação aparecendo numerada no texto:
+
+\begin{eqnarray}
+\ln(B) = \ln(t/Ne) + \beta\ln(W)
+\end{eqnarray}
+
+depois pra citar as variáveis no texto faz assim, ó $\beta$!
+
+\section{Citações e Bibliografia}
+
+Para montar a bibliografia, se você usa o Mendeley é super fácil, basta vc gerar um aquivo BibTex e deixar ele na mesma pasta que esse arquivo tex que vc estiver montando. Ele vai ser um arquivo com extensão .bib e aqui tou chamando ele de \textit{library.bib}
+
+Nesse arquivo .bib eu coloquei só uma referência ra ficar mais rápido, mas as citações são feitas assim:
+
+\citep{Oetiker2002} em parenteses.
+
+
+\citet{Oetiker2002} em texto.
+
+Depois procura ali no começo desse script, onde tao os pacotes carregados vc vai ver que tem uma parte que tem como escolher entre citaçoes em parentesis com nome do autor e ano da publicação ou entre colchetes com o número da referencia na bibliografia.
+ 
+Os comandos que aparecem com um símbolo de por cento estão comentados, é o mesmo que o jogo da velha no R.
+
+\section{Finale}
+É isso... espero que te ajude, qqr coisa me escreve.
+
+%\newpage 
+\bibliographystyle{apalike.bst}
+\singlespacing
+{\small \bibliography{library.bib}} 
+
+\end{document}
+
